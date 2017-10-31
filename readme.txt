@@ -4,8 +4,9 @@ Contributors: littlebizzy
 Tags: disable xml-rpc, disable, xml-rpc, xmlrpc, xmlrpc.php, xml, rpc, pingbacks, trackbacks, block, deny
 Requires at least: 4.4
 Tested up to: 4.8
-Stable tag: 1.0.1
-License: GPL3
+Requires PHP: 7.0
+Stable tag: 1.0.2
+License: GPLv3
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
 Completely disables all XML-RPC related functions in WordPress including pingbacks and trackbacks, and helps prevent attacks on the xmlrpc.php file.
@@ -24,6 +25,10 @@ Lastly, it attempts to generate a 403 Denied error for requests to the /xmlrpc.p
 2. Activate the plugin in WP Admin
 
 == Changelog ==
+
+= 1.0.2 =
+* minor code tweaks
+* updated recommended plugins
 
 = 1.0.1 =
 * recommended plugins
