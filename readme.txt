@@ -6,7 +6,7 @@ Requires at least: 4.4
 Tested up to: 4.9
 Requires PHP: 7.0
 Multisite support: No
-Stable tag: 1.0.4
+Stable tag: 1.0.5
 License: GPLv3
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 Prefix: DSBXML
@@ -104,6 +104,18 @@ We invite you to check out a few premium plugins that our team has also produced
 * [Speed Demon](https://www.littlebizzy.com/plugins/speed-demon)
 * [SEO Genius](https://www.littlebizzy.com/plugins/seo-genius)
 * [Great Migration](https://www.littlebizzy.com/plugins/great-migration)
+* [Security Guard](https://www.littlebizzy.com/plugins/security-guard)
+* [Genghis Khan](https://www.littlebizzy.com/plugins/genghis-khan)
+
+#### Related Services ####
+
+The following paid services are available on a case-by-case basis to upstanding members of the WordPress community:
+
+* [SSL Setup](https://www.littlebizzy.com/services/ssl)
+* [DNSSEC Setup](https://www.littlebizzy.com/services/dnssec)
+* [G Suite Setup](https://www.littlebizzy.com/services/google-apps)
+* [SendGrid Setup](https://www.littlebizzy.com/services/sendgrid)
+* [MailGun Setup](https://www.littlebizzy.com/services/mailgun)
 
 #### Special Thanks ####
 
@@ -141,10 +153,13 @@ We released this plugin in response to our managed hosting clients asking for be
 
 == Changelog ==
 
+= 1.0.5 =
+* better support for `define('DISABLE_NAG_NOTICES', true);`
+
 = 1.0.4 =
 * tested with WP 4.9
 * updated plugin meta
-* added support for `define('DISABLE_NAG_NOTICES', true);`
+* partial support for `define('DISABLE_NAG_NOTICES', true);`
 
 = 1.0.3 =
 * optimized plugin code
