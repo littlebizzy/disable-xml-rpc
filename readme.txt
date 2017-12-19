@@ -1,6 +1,7 @@
 === Disable XML-RPC ===
 
 Contributors: littlebizzy
+Donate link: https://www.patreon.com/littlebizzy
 Tags: disable, xml-rpc, xmlrpc, pingbacks, trackbacks
 Requires at least: 4.4
 Tested up to: 4.9
