@@ -1,12 +1,16 @@
 <?php
 
+// Subpackage namespace
+namespace LittleBizzy\DisableXMLRPC;
+
 /**
  * Admin Notices class
  *
  * @package WordPress
  * @subpackage Admin Notices
  */
-final class DSBXML_Admin_Notices {
+
+final class Admin_Notices {
 
 
 
@@ -20,8 +24,9 @@ final class DSBXML_Admin_Notices {
 	 */
 	private $days_before_display_rate_us = 3; // 3 days delay
 	private $days_dismissing_rate_us = 270; // 9 months reappear
-	private $rate_us_url = 'https://wordpress.org/support/plugin/disable-xml-rpc-littlebizzy/reviews/#new-post';
-	private $rate_us_message = 'Thanks for using <strong>%plugin%</strong>. Please support our free work by rating this plugin with 5 stars on WordPress.org. <a href="%url%" target="_blank">Click here to rate us.</a>';
+	private $rate_us_url = 'https://wordpress.org/support/plugin/disable-xml-rpc-littlebizzy/reviews/?rate=5#new-post';
+	private $rate_us_url2 = 'https://www.facebook.com/groups/littlebizzy/';
+	private $rate_us_message = 'Thanks for using <strong>%plugin%</strong>. Please support our free work by rating this plugin with 5 stars on WordPress.org. <a href="%url%" target="_blank">Click here to rate us.</a><br><br>You may also join our free <a href="%url2%" target="_blank">Facebook group</a> to post any questions or comments!';
 
 
 
@@ -31,31 +36,31 @@ final class DSBXML_Admin_Notices {
 	private $days_dismissing_suggestions = 180; // 6 months reappear
 	private $suggestions_message = '%plugin% recommends the following free plugins:';
 	private $suggestions = array(
-		'cf-littlebizzy' => array(
-			'name' => 'CloudFlare',
-			'desc' => 'Easily connect your WordPress website to free optimization features from CloudFlare, including one-click options to purge cache and enable dev mode.',
-			'filename' => 'cloudflare.php',
-		),
-		'force-https-littlebizzy' => array(
-			'name' => 'Force HTTPS',
-			'desc' => 'Redirects all HTTP requests to the HTTPS version and fixes all insecure static resources without altering the database (also works with CloudFlare).',
-			'filename' => 'force-https.php',
-		),
-		'disable-embeds-littlebizzy' => array(
-			'name' => 'Disable Embeds',
-			'desc' => 'Disables both external and internal embedding functions to avoid slow page render, instability and SEO issues, and to improve overall loading speed.',
-			'filename' => 'disable-embeds.php',
-		),
-		'disable-jq-migrate-littlebizzy' => array(
-			'name' => 'Disable jQuery Migrate',
-			'desc' => 'Easily prevent the jQuery migrate script that is included with WordPress core from being loaded to slim down source code (for advanced users only).',
-			'filename' => 'disable-jquery-migrate.php',
-		),
-		'server-status-littlebizzy' => array(
-			'name' => 'Server Status',
-			'desc' => 'Useful statistics about the server OS, CPU, RAM, load average, memory usage, IP address, hostname, timezone, disk space, PHP, MySQL, caches, etc.',
-			'filename' => 'server-status.php',
-		),
+          		'disable-admin-ajax-littlebizzy' => array(
+	          		'name' => 'Disable Admin-AJAX',
+			          'desc' => 'Completely disables frontend access to admin-ajax.php regardless of Heartbeat settings, to avoid unwanted AJAX calls and vastly improve performance.',
+			          'filename' => 'disable-admin-ajax.php',
+          		),
+          		'disable-jq-migrate-littlebizzy' => array(
+			          'name' => 'Disable jQuery Migrate',
+			          'desc' => 'Easily prevent the jQuery migrate script that is included with WordPress Core from being loaded to slim down source code (for advanced users only).',
+			          'filename' => 'disable-jquery-migrate.php',
+		      	),
+		      	'header-cleanup-littlebizzy' => array(
+			          'name' => 'Header Cleanup',
+			          'desc' => 'Cleans up most of the unnecessary junk meta included by default in the WordPress header including generator, RSD, shortlink, previous and next, etc.',
+			          'filename' => 'header-cleanup.php',
+		      	),
+		      	'disable-search-littlebizzy' => array(
+		          	'name' => 'Disable Search',
+		          	'desc' => 'Completely disables the built-in WordPress search function to prevent snoopers or bots from querying your database or slowing down your website.',
+		          	'filename' => 'disable-search.php',
+		      	),
+		      	'remove-query-strings-littlebizzy' => array(
+			          'name' => 'Remove Query Strings',
+			          'desc' => 'Removes all query strings from static resources meaning that proxy servers and beyond can better cache your site content (plus, better SEO scores).',
+			          'filename' => 'remove-query-strings.php',
+			),
 	);
 
 
@@ -129,9 +134,8 @@ final class DSBXML_Admin_Notices {
 		// Uninstall hook endpoint
 		register_uninstall_hook($this->plugin_file, array(__CLASS__, 'uninstall'));
 
-		// Prefix from the class name
-		$classname = explode('_', __CLASS__);
-		$this->prefix = strtolower($classname[0]);
+		// Prefix from namespace constant
+		$this->prefix = PREFIX.'_an_';
 
 		// Check notices
 		if (is_admin()) {
@@ -284,9 +288,35 @@ final class DSBXML_Admin_Notices {
 
 		?><div class="<?php echo esc_attr($this->prefix); ?>-dismiss-rate-us notice notice-success is-dismissible" data-nonce="<?php echo esc_attr(wp_create_nonce($this->prefix.'-dismiss-rate-us')); ?>">
 
-			<p><?php echo str_replace('%url%', $this->rate_us_url, str_replace('%plugin%', $plugin_data['Name'], $this->rate_us_message)); ?></p>
+			<p><?php echo $this->replace_message_var('rate_us_url', 'url', str_replace('%plugin%', $plugin_data['Name'], $this->rate_us_message)); ?></p>
 
 		</div><?php
+	}
+
+
+
+	/**
+	 * Replace until 10 properties from this object with their values
+	 */
+	private function replace_message_var($property, $var, $message, $variations = 10) {
+
+		// Allow n variations
+		for ($index = 1; $index <= $variations; $index++) {
+
+			// Prepare suffix
+			$suffix = (1 == $index)? '' : $index;
+
+			// Check property
+			$name = $property.$suffix;
+			if (!empty($this->{$name})) {
+
+				// Replace message vars
+				$message = str_replace('%'.$var.$suffix.'%', $this->{$name}, $message);
+			}
+		}
+
+		// Done
+		return $message;
 	}
 
 
