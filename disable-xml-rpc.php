@@ -12,7 +12,7 @@ Prefix: DSBXML
 */
 
 // Plugin namespace
-// namespace LittleBizzy\DisableXMLRPC;
+namespace LittleBizzy\DisableXMLRPC;
 
 // Plugin constants
 const FILE = __FILE__;
