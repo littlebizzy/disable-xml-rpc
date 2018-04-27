@@ -3,7 +3,7 @@
 Plugin Name: Disable XML-RPC
 Plugin URI: https://www.littlebizzy.com/plugins/disable-xml-rpc
 Description: Completely disables all XML-RPC related functions in WordPress including pingbacks and trackbacks, and helps prevent attacks on the xmlrpc.php file.
-Version: 1.0.6
+Version: 1.0.7
 Author: LittleBizzy
 Author URI: https://www.littlebizzy.com
 License: GPLv3
@@ -11,9 +11,28 @@ License URI: http://www.gnu.org/licenses/gpl-3.0.html
 Prefix: DSBXML
 */
 
+// Plugin namespace
+// namespace LittleBizzy\DisableXMLRPC;
+
+// Plugin constants
+const FILE = __FILE__;
+const PREFIX = 'dsbxml';
+const VERSION = '1.0.7';
+
+// Block direct calls
+if (!function_exists('add_action'))
+	die;
+
 // Admin Notices module
-require_once dirname(__FILE__).'/admin-notices.php';
-DSBXML_Admin_Notices::instance(__FILE__);
+require_once dirname(FILE).'/admin-notices.php';
+Admin_Notices::instance(FILE);
+
+// Admin Notices Multisite module
+// (uncomment //return to disable plugin on Multisite)
+require_once dirname(FILE).'/admin-notices-ms.php';
+if (false !== \LittleBizzy\DisableXMLRPC\Admin_Notices_MS::instance(FILE)) {
+	//return;
+}
 
 /**
  * Define main plugin class
