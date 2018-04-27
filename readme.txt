@@ -7,7 +7,7 @@ Requires at least: 4.4
 Tested up to: 4.9
 Requires PHP: 7.0
 Multisite support: No
-Stable tag: 1.0.6
+Stable tag: 1.0.7
 License: GPLv3
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 Prefix: DSBXML
@@ -18,17 +18,22 @@ Completely disables all XML-RPC related functions in WordPress including pingbac
 
 Completely disables all XML-RPC related functions in WordPress including pingbacks and trackbacks, and helps prevent attacks on the xmlrpc.php file.
 
-* [**Patreon (support us with $1/mo)**](https://www.patreon.com/littlebizzy)
+* [**Join our FREE Facebook group for support!**](https://www.facebook.com/groups/littlebizzy/)
+* [**Worth a 5-star review? Thank you!**](https://wordpress.org/support/plugin/disable-xml-rpc-littlebizzy/reviews/?rate=5#new-post)
 * [Plugin Homepage](https://www.littlebizzy.com/plugins/disable-xml-rpc)
 * [Plugin GitHub](https://github.com/littlebizzy/disable-xml-rpc/)
-* [SlickStack](https://slickstack.io)
-* [Starter](https://starter.littlebizzy.com)
+
+*Our related OSS projects:*
+
+* [SlickStack (LEMP stack automation)](https://slickstack.io)
+* [WP Lite boilerplate](https://wplite.org)
+* [Starter Theme](https://starter.littlebizzy.com)
 
 #### The Long Version ####
 
 Does not affect the database whatsoever, nor change settings on existing posts/pages. This plugin only affects the main Discussion settings while disabling XML-RPC API functions. If you wish to "clean up" all posts and pages in your database e.g. turn off all their pingbacks and trackbacks or delete the old ones, please use a different plugin for that.
 
-Lastly, it attempts to generate a 403 Denied error for requests to the /xmlrpc.php URL, but does not affect that file or your server in any way.
+Lastly, it attempts to generate a 403 Denied error for requests to the `/xmlrpc.php` URL, but does not affect that file or your server in any way.
 
 #### Compatibility ####
 
@@ -72,6 +77,7 @@ We invite you to check out a few other related free plugins that our team has al
 * [404 To Homepage](https://wordpress.org/plugins/404-to-homepage-littlebizzy/)
 * [CloudFlare](https://wordpress.org/plugins/cf-littlebizzy/)
 * [Delete Expired Transients](https://wordpress.org/plugins/delete-expired-transients-littlebizzy/)
+* [Disable Admin-AJAX](https://wordpress.org/plugins/disable-admin-ajax-littlebizzy/)
 * [Disable Author Pages](https://wordpress.org/plugins/disable-author-pages-littlebizzy/)
 * [Disable Cart Fragments](https://wordpress.org/plugins/disable-cart-fragments-littlebizzy/)
 * [Disable Embeds](https://wordpress.org/plugins/disable-embeds-littlebizzy/)
@@ -91,6 +97,7 @@ We invite you to check out a few other related free plugins that our team has al
 * [Force HTTPS](https://wordpress.org/plugins/force-https-littlebizzy/)
 * [Force Strong Hashing](https://wordpress.org/plugins/force-strong-hashing-littlebizzy/)
 * [Google Analytics](https://wordpress.org/plugins/ga-littlebizzy/)
+* [Header Cleanup](https://wordpress.org/plugins/header-cleanup-littlebizzy/)
 * [Index Autoload](https://wordpress.org/plugins/index-autoload-littlebizzy/)
 * [Maintenance Mode](https://wordpress.org/plugins/maintenance-mode-littlebizzy/)
 * [Profile Change Alerts](https://wordpress.org/plugins/profile-change-alerts-littlebizzy/)
@@ -122,6 +129,7 @@ We thank the following groups for their generous contributions to the WordPress 
 * [Greg Rickaby](https://gregrickaby.com)
 * [Matt Mullenweg](https://ma.tt)
 * [Mika Epstein](https://halfelf.org)
+* [Mike Garrett](https://mikengarrett.com)
 * [Samuel Wood](http://ottopress.com)
 * [Scott Reilly](http://coffee2code.com)
 * [Jan Dembowski](https://profiles.wordpress.org/jdembowski)
@@ -133,6 +141,7 @@ We thank the following groups for their generous contributions to the WordPress 
 * [Rahul Bansal](https://profiles.wordpress.org/rahul286)
 * [Roots](https://roots.io)
 * [rtCamp](https://rtcamp.com)
+* [Ryan Hellyer](https://geek.hellyer.kiwi)
 * [WP Chat](https://wpchat.com)
 * [WP Tavern](https://wptavern.com)
 
@@ -147,6 +156,12 @@ We released this plugin in response to our managed hosting clients asking for be
 3. Test plugin is working by loading the `/xmlrpc.php` file URI
 
 == Changelog ==
+
+= 1.0.7 =
+* optimized plugin code
+* added warning to Multisite installations
+* updated recommended plugins
+* updated plugin meta
 
 = 1.0.6 =
 * updated recommended plugins
