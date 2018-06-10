@@ -1,0 +1,9 @@
+# Disable XML-RPC
+
+Completely disables all XML-RPC related functions in WordPress including pingbacks and trackbacks, and helps prevent attacks on the xmlrpc.php file.
+
+* Download: https://wordpress.org/plugins/disable-xml-rpc-littlebizzy
+* Plugin Homepage: https://www.littlebizzy.com/plugins/disable-xml-rpc
+* Free Facebook support group: https://www.facebook.com/groups/littlebizzy/
+
+**Please do not submit Pull Requests. Instead, kindly create a new Issue with relevant information.**
