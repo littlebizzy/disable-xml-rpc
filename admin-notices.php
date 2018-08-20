@@ -36,6 +36,11 @@ final class Admin_Notices {
 	private $days_dismissing_suggestions = 180; // 6 months reappear
 	private $suggestions_message = '%plugin% recommends the following free plugins:';
 	private $suggestions = array(
+			'disable-post-via-email-littlebizzy' => array(
+			          'name' => 'Disable Post Via Email',
+			          'desc' => 'Completely disables and hides the Post Via Email feature included in WordPress Core for stronger security and to simplify the backend settings page.',
+			          'filename' => 'disable-post-via-email.php',
+			),
           		'disable-admin-ajax-littlebizzy' => array(
 	          		'name' => 'Disable Admin-AJAX',
 			          'desc' => 'Completely disables frontend access to admin-ajax.php regardless of Heartbeat settings, to avoid unwanted AJAX calls and vastly improve performance.',
@@ -56,11 +61,6 @@ final class Admin_Notices {
 		          	'desc' => 'Completely disables the built-in WordPress search function to prevent snoopers or bots from querying your database or slowing down your website.',
 		          	'filename' => 'disable-search.php',
 		      	),
-		      	'remove-query-strings-littlebizzy' => array(
-			          'name' => 'Remove Query Strings',
-			          'desc' => 'Removes all query strings from static resources meaning that proxy servers and beyond can better cache your site content (plus, better SEO scores).',
-			          'filename' => 'remove-query-strings.php',
-			),
 	);
 
 
