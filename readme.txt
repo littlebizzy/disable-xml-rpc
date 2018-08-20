@@ -7,7 +7,7 @@ Requires at least: 4.4
 Tested up to: 4.9
 Requires PHP: 7.0
 Multisite support: No
-Stable tag: 1.0.7
+Stable tag: 1.0.8
 License: GPLv3
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 Prefix: DSBXML
@@ -156,6 +156,9 @@ We released this plugin in response to our managed hosting clients asking for be
 3. Test plugin is working by loading the `/xmlrpc.php` file URI
 
 == Changelog ==
+
+= 1.0.8 =
+* updated recommended plugins
 
 = 1.0.7 =
 * optimized plugin code
