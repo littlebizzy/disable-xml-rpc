@@ -11,4 +11,3 @@ Completely disables all XML-RPC related functions in WordPress including pingbac
 *Please do not submit Pull Requests. Instead, kindly create a new Issue with relevant information if you are an experienced developer, otherwise post your comments in our free Facebook group.*
 
 ***No emails, please! Thank you.***
-
