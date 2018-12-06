@@ -7,7 +7,7 @@ Requires at least: 4.4
 Tested up to: 5.0
 Requires PHP: 7.0
 Multisite support: No
-Stable tag: 1.1.0
+Stable tag: 1.1.1
 License: GPLv3
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 Prefix: DSBXML
@@ -60,27 +60,9 @@ Any of our WordPress plugins may also be loaded as "Must-Use" plugins by using o
 * Multisite Support: No
 * Uninstalls Data: Yes
 
-#### Special Thanks ####
-
-[Alex Georgiou](https://www.alexgeorgiou.gr), [Automattic](https://automattic.com), [Brad Touesnard](https://bradt.ca), [Daniel Auener](http://www.danielauener.com), [Delicious Brains](https://deliciousbrains.com), [Greg Rickaby](https://gregrickaby.com), [Matt Mullenweg](https://ma.tt), [Mika Epstein](https://halfelf.org), [Mike Garrett](https://mikengarrett.com), [Samuel Wood](http://ottopress.com), [Scott Reilly](http://coffee2code.com), [Jan Dembowski](https://profiles.wordpress.org/jdembowski), [Jeff Starr](https://perishablepress.com), [Jeff Chandler](https://jeffc.me), [Jeff Matson](https://jeffmatson.net), [Jeremy Wagner](https://jeremywagner.me), [John James Jacoby](https://jjj.blog), [Leland Fiegel](https://leland.me), [Luke Cavanagh](https://github.com/lukecav), [Mike Jolley](https://mikejolley.com), [Pau Iglesias](https://pauiglesias.com), [Paul Irish](https://www.paulirish.com), [Rahul Bansal](https://profiles.wordpress.org/rahul286), [Roots](https://roots.io), [rtCamp](https://rtcamp.com), [Ryan Hellyer](https://geek.hellyer.kiwi), [WP Chat](https://wpchat.com), [WP Tavern](https://wptavern.com)
-
 #### Disclaimer ####
 
 We released this plugin in response to our managed hosting clients asking for better access to their server, and our primary goal will remain supporting that purpose. Although we are 100% open to fielding requests from the WordPress community, we kindly ask that you keep these conditions in mind, and refrain from slandering, threatening, or harassing our team members in order to get a feature added, or to otherwise get "free" support. The only place you should be contacting us is in our free [**Facebook group**](https://www.facebook.com/groups/littlebizzy/) which has been setup for this purpose, or via GitHub if you are an experienced developer. Thank you!
-
-#### Our Philosophy ####
-
-> "Decisions, not options." -- WordPress.org
-
-> "Everything should be made as simple as possible, but no simpler." -- Albert Einstein
-
-> "Write programs that do one thing and do it well... write programs to work together." -- Doug McIlroy
-
-> "The innovation that this industry talks about so much is bullshit. Anybody can innovate... 99% of it is 'Get the work done.' The real work is in the details." -- Linus Torvalds
-
-#### Search Keywords ####
-
-block brute force attacks, brute force attacks, disable, disable pingbacks, disable self ping, disable trackbacks, disable xml-rpc, disable xmlrpc, no self ping, no self pingbacks, no self pinging, no self trackbacks, pingbacks, remove, remove xml-rpc, remove xmlrpc, self ping, trackbacks, xml-rpc, xmlrpc, xmlrpc.php
 
 == Installation ==
 
@@ -91,6 +73,9 @@ block brute force attacks, brute force attacks, disable, disable pingbacks, disa
 After activing the plugin, purge all caches and try loading the `/xmlrpc.php` URI of your website, and it should result in a 403 Denied error in your browser. In addition, no further pingbacks or trackbacks should appear in the Comments section of your WP Admin Dashboard (nor the frontend in the Comments section of your blog posts and custom post types).
 
 == Changelog ==
+
+= 1.1.1 =
+* updated recommended plugins
 
 = 1.1.0 =
 * tested with WP 5.0
