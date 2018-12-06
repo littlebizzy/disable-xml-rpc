@@ -38,6 +38,11 @@ final class Admin_Notices {
 	private $days_dismissing_suggestions = 180; // 6 months reappear
 	private $suggestions_message = '%plugin% recommends the following free plugins:';
 	private $suggestions = array(
+			'speed-demon-littlebizzy' => array(
+		          	'name' => 'Speed Demon',
+		          	'desc' => 'A powerful bundle of lightweight tweaks that drastically improve the loading speed of WordPress by reducing bloat and improving overall efficiency.',
+		          	'filename' => 'speed-demon.php',
+		      	),
 			'disable-post-via-email-littlebizzy' => array(
 			          'name' => 'Disable Post Via Email',
 			          'desc' => 'Completely disables and hides the Post Via Email feature included in WordPress Core for stronger security and to simplify the backend settings page.',
@@ -53,15 +58,10 @@ final class Admin_Notices {
 			          'desc' => 'Easily prevent the jQuery migrate script that is included with WordPress Core from being loaded to slim down source code (for advanced users only).',
 			          'filename' => 'disable-jquery-migrate.php',
 		      	),
-		      	'header-cleanup-littlebizzy' => array(
+			'header-cleanup-littlebizzy' => array(
 			          'name' => 'Header Cleanup',
 			          'desc' => 'Cleans up most of the unnecessary junk meta included by default in the WordPress header including generator, RSD, shortlink, previous and next, etc.',
 			          'filename' => 'header-cleanup.php',
-		      	),
-		      	'disable-search-littlebizzy' => array(
-		          	'name' => 'Disable Search',
-		          	'desc' => 'Completely disables the built-in WordPress search function to prevent snoopers or bots from querying your database or slowing down your website.',
-		          	'filename' => 'disable-search.php',
 		      	),
 	);
 
