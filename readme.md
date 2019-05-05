@@ -7,8 +7,11 @@ Completely disables all XML-RPC related functions in WordPress including pingbac
 
 ### Defined Constants
 
-    /* Plugin Meta */
+    /** Plugin Meta */
     define('DISABLE_NAG_NOTICES', true);
+    
+    /** Disable XML-RPC Functions */
+    define('DISABLE_XML_RPC', true); // default = true
 
 ### Compatibility
 
