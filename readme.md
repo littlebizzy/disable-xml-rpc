@@ -2,23 +2,46 @@
 
 Completely disables all XML-RPC related functions in WordPress including pingbacks and trackbacks, and helps prevent attacks on the xmlrpc.php file.
 
-* [Plugin Homepage (LittleBizzy.com)](https://www.littlebizzy.com/plugins/disable-xml-rpc)
-* [Free Facebook Group](https://www.facebook.com/groups/littlebizzy/)
+## Changelog
 
-### Defined Constants
+### 1.1.1
+- updated recommended plugins
 
-    /** Plugin Meta */
-    define('DISABLE_NAG_NOTICES', true);
-    
-    /** Disable XML-RPC Functions */
-    define('DISABLE_XML_RPC', true); // default = true
+### 1.1.0
+- tested with WP 5.0
 
-### Compatibility
+### 1.0.8
+- updated recommended plugins
 
-This plugin has been designed for use on [SlickStack](https://slickstack.io) web servers with PHP 7.2 and MySQL 5.7 to achieve best performance. All of our plugins are meant for single site WordPress installations only — for both performance and usability reasons, we strongly recommend avoiding WordPress Multisite for the vast majority of your projects.
+### 1.0.7
+- optimized plugin code
+- added warning for Multisite installations
+- updated recommended plugins
+- updated plugin meta
 
-Any of our WordPress plugins may also be loaded as "Must-Use" plugins (meaning that they load first, and cannot be deactivated) by using our free [Autoloader](https://github.com/littlebizzy/autoloader) script in the `mu-plugins` directory.
+### 1.0.6
+- updated recommended plugins
 
-### Support Issues
+### 1.0.5
+- better support for `DISABLE_NAG_NOTICES`
 
-Please do not submit Pull Requests. Instead, kindly create a new Issue with relevant information if you are an experienced developer, otherwise you may become a [**LittleBizzy.com Member**](https://www.littlebizzy.com/members) if your company requires official support.
+### 1.0.4
+- tested with WP 4.9
+- updated plugin meta
+- partial support for `DISABLE_NAG_NOTICES`
+
+### 1.0.3
+- optimized plugin code
+- updated recommended plugins
+- added rating request notice
+
+### 1.0.2
+- optimized plugin code
+- updated recommended plugins
+
+### 1.0.1
+- added recommended plugins notice
+
+### 1.0.0
+- initial release
+  
