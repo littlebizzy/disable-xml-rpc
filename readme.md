@@ -4,6 +4,13 @@ Disables all XML-RPC functions
 
 ## Changelog
 
+### 2.0.0
+- completely refactored to WordPress standards
+- several new snippets to further disable XML-RPC calls and methods
+- support for Git Updater
+- spport for PHP 7.0 to 8.3
+- support for Multisite
+
 ### 1.1.1
 - updated recommended plugins
 
