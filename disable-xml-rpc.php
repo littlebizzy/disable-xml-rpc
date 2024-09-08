@@ -4,7 +4,7 @@
 Plugin Name: Disable XML-RPC
 Plugin URI: https://www.littlebizzy.com/plugins/disable-xml-rpc
 Description: Disables all XML-RPC functions
-Version: 2.0.0
+Version: 2.0.1
 Author: LittleBizzy
 Author URI: https://www.littlebizzy.com
 License: GPLv3
@@ -21,7 +21,7 @@ if (!defined('ABSPATH')) {
 
 // Disable WordPress.org updates for this plugin
 add_filter('gu_override_dot_org', function ($overrides) {
-    $overrides['disable-xml-rpc/disable-xml-rpc.php'] = true;
+    $overrides[] = 'disable-xml-rpc/disable-xml-rpc.php';
     return $overrides;
 });
 
