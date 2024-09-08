@@ -4,6 +4,9 @@ Disables all XML-RPC functions
 
 ## Changelog
 
+### 2.0.1
+- fix `gu_override_dot_org` snippet
+
 ### 2.0.0
 - completely refactored to WordPress standards
 - several new snippets to further disable XML-RPC calls and methods
