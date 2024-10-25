@@ -4,6 +4,10 @@ Disables all XML-RPC functions
 
 ## Changelog
 
+### 2.0.2
+- added `Requires PHP` plugin header
+- improved `gu_override_dot_org` snippet
+
 ### 2.0.1
 - fix `gu_override_dot_org` snippet
 
