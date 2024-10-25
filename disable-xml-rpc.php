@@ -1,29 +1,28 @@
 <?php
-
 /*
 Plugin Name: Disable XML-RPC
 Plugin URI: https://www.littlebizzy.com/plugins/disable-xml-rpc
 Description: Disables all XML-RPC functions
-Version: 2.0.1
+Version: 2.0.2
+Requires PHP: 7.0
 Author: LittleBizzy
 Author URI: https://www.littlebizzy.com
 License: GPLv3
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 GitHub Plugin URI: littlebizzy/disable-xml-rpc
 Primary Branch: master
-Prefix: DSBXML
 */
 
-// Exit if accessed directly
-if (!defined('ABSPATH')) {
+// prevent direct access
+if ( ! defined( 'ABSPATH' ) ) {
     exit;
 }
 
-// Disable WordPress.org updates for this plugin
-add_filter('gu_override_dot_org', function ($overrides) {
+// disable wordpress.org updates for this plugin
+add_filter( 'gu_override_dot_org', function( $overrides ) {
     $overrides[] = 'disable-xml-rpc/disable-xml-rpc.php';
     return $overrides;
-});
+}, 999 );
 
 // Disable XML-RPC API completely
 add_filter('xmlrpc_enabled', '__return_false');
