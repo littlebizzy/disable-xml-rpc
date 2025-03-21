@@ -60,7 +60,9 @@ add_filter( 'pre_option_default_pingback_flag', '__return_zero' );
 // hide pingback and trackback options on the discussion settings page
 add_action( 'admin_enqueue_scripts', function( $hook ) {
 	if ( $hook === 'options-discussion.php' ) {
-		wp_add_inline_style( 'dashboard', '
+		wp_register_style( 'disable-xmlrpc-style', false );
+		wp_enqueue_style( 'disable-xmlrpc-style' );
+		wp_add_inline_style( 'disable-xmlrpc-style', '
 			.form-table td label[for="default_pingback_flag"],
 			.form-table td label[for="default_pingback_flag"] + br,
 			.form-table td label[for="default_ping_status"],
