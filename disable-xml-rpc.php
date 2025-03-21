@@ -5,12 +5,15 @@ Plugin URI: https://www.littlebizzy.com/plugins/disable-xml-rpc
 Description: Disables all XML-RPC functions
 Version: 2.0.2
 Requires PHP: 7.0
+Tested up to: 6.7
 Author: LittleBizzy
 Author URI: https://www.littlebizzy.com
 License: GPLv3
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
+Update URI: false
 GitHub Plugin URI: littlebizzy/disable-xml-rpc
 Primary Branch: master
+Text Domain: disable-xml-rpc
 */
 
 // prevent direct access
