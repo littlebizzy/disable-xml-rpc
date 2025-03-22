@@ -4,12 +4,20 @@ Disables all XML-RPC functions
 
 ## Changelog
 
+### 2.1.0
+- removed redundant `xmlrpc_methods` filter
+- fixed "dummy" CSS class to hide discussion settings reliably
+- improved code formatting and hook order
+- added `Tested up to` plugin header
+- added `Update URI` plugin header
+- added `Text Domain` plugin header
+
 ### 2.0.2
 - added `Requires PHP` plugin header
 - improved `gu_override_dot_org` snippet
 
 ### 2.0.1
-- fix `gu_override_dot_org` snippet
+- fixed `gu_override_dot_org` snippet
 
 ### 2.0.0
 - completely refactored to WordPress standards
