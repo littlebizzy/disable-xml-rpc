@@ -4,6 +4,10 @@ Disables all XML-RPC functions
 
 ## Changelog
 
+### 2.2.0
+- replaced raw `header()` calls with WordPress-native `status_header()` for proper HTTP status handling
+- `Tested up to:` bumped to 6.9
+
 ### 2.1.0
 - removed redundant `xmlrpc_methods` filter
 - fixed "dummy" CSS class to hide discussion settings reliably
