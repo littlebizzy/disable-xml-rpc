@@ -4,6 +4,11 @@ Disables all XML-RPC functions
 
 ## Changelog
 
+### 2.3.0
+- added protocol-level hardening by disabling all XML-RPC methods via `xmlrpc_methods` filter
+- prevents plugins from re-registering XML-RPC endpoints after XML-RPC is disabled
+- strengthens XML-RPC lockdown without affecting REST API or wp-json
+
 ### 2.2.0
 - replaced raw `header()` calls with WordPress-native `status_header()` for proper HTTP status handling
 - `Tested up to:` bumped to 6.9
