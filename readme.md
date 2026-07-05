@@ -6,7 +6,7 @@ Disables all XML-RPC functions
 
 ### 2.5.0
 - tightened fail-fast `REQUEST_URI` handling to parse only the request path before matching `xmlrpc.php`
-- runs XML-RPC disabling filters at late priority to avoid later method re-registration
+- runs XML-RPC disabling filters at late priority `999` to avoid later method re-registration
 
 ### 2.4.0
 - added fail-fast XML-RPC blocking via `REQUEST_URI` detection when used as an MU plugin
