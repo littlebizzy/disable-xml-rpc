@@ -3,9 +3,9 @@
 Plugin Name: Disable XML-RPC
 Plugin URI: https://www.littlebizzy.com/plugins/disable-xml-rpc
 Description: Disables all XML-RPC functions
-Version: 2.4.0
+Version: 2.5.0
 Requires PHP: 7.0
-Tested up to: 6.9
+Tested up to: 7.0
 Author: LittleBizzy
 Author URI: https://www.littlebizzy.com
 License: GPLv3
@@ -81,5 +81,3 @@ add_action( 'admin_enqueue_scripts', function( $hook ) {
 		' );
 	}
 } );
-
-// Ref: ChatGPT
