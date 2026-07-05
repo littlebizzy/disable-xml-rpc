@@ -47,7 +47,7 @@ add_filter( 'xmlrpc_methods', '__return_empty_array', 999 );
 add_action( 'xmlrpc_call', function() {
 	status_header( 403 );
 	exit;
-}, 999 );
+}, 999, 0 );
 
 // block direct access to xmlrpc.php
 add_action( 'init', function() {
