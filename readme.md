@@ -2,11 +2,29 @@
 
 Disables all XML-RPC functions
 
+## What it does
+
+- blocks direct requests to `xmlrpc.php`
+- disables XML-RPC authentication and methods
+- removes the RSD link from the site header
+- removes the `X-Pingback` header
+- disables pingback and trackback defaults for new content
+- hides pingback and trackback defaults on the Discussion settings page
+
+## What it does not do
+
+- does not disable the REST API or `wp-json`
+- does not disable the WooCommerce REST API
+- does not modify Nginx, Apache, or other server config
+- does not retroactively close pingbacks or trackbacks on existing content
+- does not disable `wp-trackback.php`, which is separate from XML-RPC
+
 ## Changelog
 
 ### 2.5.0
 - tightened fail-fast `REQUEST_URI` handling to parse only the request path before matching `xmlrpc.php`
 - runs XML-RPC disabling filters at late priority `999` to avoid later method re-registration
+- documented what the plugin does and does not do
 
 ### 2.4.0
 - added fail-fast XML-RPC blocking via `REQUEST_URI` detection when used as an MU plugin
@@ -42,7 +60,7 @@ Disables all XML-RPC functions
 - completely refactored to WordPress standards
 - several new snippets to further disable XML-RPC calls and methods
 - support for Git Updater
-- spport for PHP 7.0 to 8.3
+- support for PHP 7.0 to 8.3
 - support for Multisite
 
 ### 1.1.1
