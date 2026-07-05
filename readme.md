@@ -25,7 +25,7 @@ Disables all XML-RPC functions
 - clarified the XML-RPC dispatch fallback comment
 - runs the XML-RPC dispatch fallback at late priority `999` with zero accepted args
 - blocks direct requests to `wp-trackback.php`
-- closes pingbacks and trackbacks at runtime without modifying existing content
+- forces `pings_open` false at late priority `999` to close pingbacks and trackbacks at runtime without modifying existing content
 
 ### 2.5.0
 - `Tested up to:` bumped to 7.0
