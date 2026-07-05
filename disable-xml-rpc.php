@@ -3,7 +3,7 @@
 Plugin Name: Disable XML-RPC
 Plugin URI: https://www.littlebizzy.com/plugins/disable-xml-rpc
 Description: Disables all XML-RPC functions
-Version: 2.5.0
+Version: 2.5.1
 Requires PHP: 7.0
 Tested up to: 7.0
 Author: LittleBizzy
@@ -43,11 +43,11 @@ add_filter( 'xmlrpc_enabled', '__return_false', 999 );
 // disable all xml-rpc methods to prevent re-registration by plugins
 add_filter( 'xmlrpc_methods', '__return_empty_array', 999 );
 
-// immediately terminate any xml-rpc requests
+// terminate xml-rpc calls that reach method dispatch
 add_action( 'xmlrpc_call', function() {
 	status_header( 403 );
 	exit;
-} );
+}, 999 );
 
 // block direct access to xmlrpc.php
 add_action( 'init', function() {
