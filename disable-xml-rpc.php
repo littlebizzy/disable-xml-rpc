@@ -28,9 +28,13 @@ add_filter( 'gu_override_dot_org', function( $overrides ) {
 }, 999 );
 
 // fail fast on xmlrpc.php before wordpress fully loads (when used as MU plugin)
-if ( ! empty( $_SERVER['REQUEST_URI'] ) && strpos( $_SERVER['REQUEST_URI'], 'xmlrpc.php' ) !== false ) {
-	status_header( 403 );
-	exit;
+if ( ! empty( $_SERVER['REQUEST_URI'] ) ) {
+	$disable_xmlrpc_request_path = parse_url( $_SERVER['REQUEST_URI'], PHP_URL_PATH );
+
+	if ( is_string( $disable_xmlrpc_request_path ) && basename( $disable_xmlrpc_request_path ) === 'xmlrpc.php' ) {
+		status_header( 403 );
+		exit;
+	}
 }
 
 // disable xml-rpc completely
