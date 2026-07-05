@@ -4,6 +4,11 @@ Disables all XML-RPC functions
 
 ## Changelog
 
+### 2.5.0
+- bumped plugin version to 2.5.0 and `Tested up to:` to 7.0
+- tightened fail-fast `REQUEST_URI` handling to parse only the request path before matching `xmlrpc.php`
+- removed generated-reference comment from the plugin file
+
 ### 2.4.0
 - added fail-fast XML-RPC blocking via `REQUEST_URI` detection when used as an MU plugin
 - blocks `xmlrpc.php` before WordPress fully loads to reduce CPU usage under attack
@@ -81,4 +86,3 @@ Disables all XML-RPC functions
 
 ### 1.0.0
 - initial release
-  
