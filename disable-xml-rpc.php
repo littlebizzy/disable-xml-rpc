@@ -70,6 +70,9 @@ add_filter( 'wp_headers', function( $headers ) {
 add_filter( 'pre_option_default_ping_status', '__return_zero' );
 add_filter( 'pre_option_default_pingback_flag', '__return_zero' );
 
+// close pingbacks and trackbacks at runtime
+add_filter( 'pings_open', '__return_false', 999 );
+
 // hide pingback and trackback options on the discussion settings page
 add_action( 'admin_enqueue_scripts', function( $hook ) {
 	if ( $hook === 'options-discussion.php' ) {
