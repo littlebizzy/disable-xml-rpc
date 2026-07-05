@@ -38,10 +38,10 @@ if ( ! empty( $_SERVER['REQUEST_URI'] ) ) {
 }
 
 // disable xml-rpc completely
-add_filter( 'xmlrpc_enabled', '__return_false' );
+add_filter( 'xmlrpc_enabled', '__return_false', 999 );
 
 // disable all xml-rpc methods to prevent re-registration by plugins
-add_filter( 'xmlrpc_methods', '__return_empty_array' );
+add_filter( 'xmlrpc_methods', '__return_empty_array', 999 );
 
 // immediately terminate any xml-rpc requests
 add_action( 'xmlrpc_call', function() {
