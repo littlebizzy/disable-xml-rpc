@@ -10,14 +10,15 @@ Disables all XML-RPC functions
 - removes the RSD link from the site header
 - removes the `X-Pingback` header
 - disables pingback and trackback defaults for new content
+- closes pingbacks and trackbacks at runtime
 - hides pingback and trackback defaults on the Discussion settings page
 
-## What it does not do
+## What it doesn't do
 
 - does not disable the REST API or `wp-json`
 - does not disable the WooCommerce REST API
 - does not modify Nginx, Apache, or other server config
-- does not retroactively close pingbacks or trackbacks on existing content
+- does not modify existing content records in the database
 
 ## Changelog
 
