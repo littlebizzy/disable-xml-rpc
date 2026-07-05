@@ -18,7 +18,7 @@ Disables all XML-RPC functions
 - does not disable the REST API or `wp-json`
 - does not disable the WooCommerce REST API
 - does not modify Nginx, Apache, or other server config
-- does not modify existing content records in the database
+- does not modify existing pingback or trackback records in the database
 
 ## Changelog
 
