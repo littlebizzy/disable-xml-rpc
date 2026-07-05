@@ -23,7 +23,7 @@ Disables all XML-RPC functions
 
 ### 2.5.1
 - clarified the XML-RPC dispatch fallback comment
-- runs the XML-RPC dispatch fallback at late priority `999`
+- runs the XML-RPC dispatch fallback at late priority `999` with zero accepted args
 
 ### 2.5.0
 - `Tested up to:` bumped to 7.0
