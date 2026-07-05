@@ -21,6 +21,10 @@ Disables all XML-RPC functions
 
 ## Changelog
 
+### 2.5.1
+- clarified the XML-RPC dispatch fallback comment
+- runs the XML-RPC dispatch fallback at late priority `999`
+
 ### 2.5.0
 - `Tested up to:` bumped to 7.0
 - tightened fail-fast `REQUEST_URI` handling to parse only the request path before matching `xmlrpc.php`
