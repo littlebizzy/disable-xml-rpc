@@ -27,11 +27,11 @@ add_filter( 'gu_override_dot_org', function( $overrides ) {
     return $overrides;
 }, 999 );
 
-// fail fast on xmlrpc.php before wordpress fully loads (when used as MU plugin)
+// fail fast on xmlrpc.php and wp-trackback.php before wordpress fully loads (when used as MU plugin)
 if ( ! empty( $_SERVER['REQUEST_URI'] ) ) {
 	$disable_xmlrpc_request_path = parse_url( $_SERVER['REQUEST_URI'], PHP_URL_PATH );
 
-	if ( is_string( $disable_xmlrpc_request_path ) && basename( $disable_xmlrpc_request_path ) === 'xmlrpc.php' ) {
+	if ( is_string( $disable_xmlrpc_request_path ) && in_array( basename( $disable_xmlrpc_request_path ), array( 'xmlrpc.php', 'wp-trackback.php' ), true ) ) {
 		status_header( 403 );
 		exit;
 	}
@@ -49,9 +49,9 @@ add_action( 'xmlrpc_call', function() {
 	exit;
 }, 999, 0 );
 
-// block direct access to xmlrpc.php
+// block direct access to xmlrpc.php and wp-trackback.php
 add_action( 'init', function() {
-	if ( isset( $_SERVER['SCRIPT_FILENAME'] ) && basename( $_SERVER['SCRIPT_FILENAME'] ) === 'xmlrpc.php' ) {
+	if ( isset( $_SERVER['SCRIPT_FILENAME'] ) && in_array( basename( $_SERVER['SCRIPT_FILENAME'] ), array( 'xmlrpc.php', 'wp-trackback.php' ), true ) ) {
 		status_header( 403 );
 		exit;
 	}
