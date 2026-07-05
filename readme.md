@@ -5,6 +5,7 @@ Disables all XML-RPC functions
 ## What it does
 
 - blocks direct requests to `xmlrpc.php`
+- blocks direct requests to `wp-trackback.php`
 - disables XML-RPC authentication and methods
 - removes the RSD link from the site header
 - removes the `X-Pingback` header
@@ -17,13 +18,13 @@ Disables all XML-RPC functions
 - does not disable the WooCommerce REST API
 - does not modify Nginx, Apache, or other server config
 - does not retroactively close pingbacks or trackbacks on existing content
-- does not disable `wp-trackback.php`, which is separate from XML-RPC
 
 ## Changelog
 
 ### 2.5.1
 - clarified the XML-RPC dispatch fallback comment
 - runs the XML-RPC dispatch fallback at late priority `999` with zero accepted args
+- blocks direct requests to `wp-trackback.php`
 
 ### 2.5.0
 - `Tested up to:` bumped to 7.0
