@@ -2,6 +2,16 @@
 
 Disables all XML-RPC functions
 
+## Description
+
+Disable XML-RPC blocks WordPress XML-RPC, pingback, and trackback requests.
+
+XML-RPC provides remote access to WordPress for older publishing tools and external integrations. On sites that do not use it, the endpoint can create an unnecessary attack surface and receive automated login attempts, pingback abuse, and other unwanted traffic.
+
+The plugin blocks direct requests to `xmlrpc.php` and `wp-trackback.php`, disables XML-RPC authentication and all registered methods, and terminates requests that reach XML-RPC method dispatch. It also removes the RSD and `X-Pingback` discovery headers, disables pingback and trackback defaults for new content, and closes them at runtime.
+
+The WordPress REST API, `wp-json`, and WooCommerce REST API continue to work normally. The plugin does not modify web server configuration or change existing pingback and trackback records in the database.
+
 ## What it does
 
 - blocks direct requests to `xmlrpc.php`
